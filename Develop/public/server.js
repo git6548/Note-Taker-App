@@ -1,4 +1,5 @@
 const express = require('express');
+//const requestid = require('express-request-id')
 const path = require('path');
 const db = require('../db/db.json');
 const fs = require('fs');
@@ -10,20 +11,21 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 
-//get request at route notes to return what is in db
+//return index file
 
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/index.html');
   });
 
+  // return notes file
   app.get('/notes', (req, res) => {
     res.sendFile(__dirname + '/notes.html');
   });
 
-
+// return db file
 app.get('/api/notes', (req, res) => res.json(db));
 
-
+// function to add the post to the file
 function createNewNote(body, notesArray) {
     const note = body;
     notesArray.push(note);
@@ -34,11 +36,33 @@ function createNewNote(body, notesArray) {
     return note;
   }
 
-// post request
+// post request to add the post to the file
 app.post('/api/notes', (req, res) => {
     createNewNote(req.body, notes)
     res.json(db)
 })
+
+// import express from 'express';
+// import requestID from 'express-request-id';
+
+// app.use(requestID());
+
+// app.get('/', function (req, res, next) {
+//     res.send(req.id);
+//     next();
+// });
+
+// app.listen(3000, function() {
+//     console.log('Listening on port %d', server.address().port);
+// });
+
+// // curl localhost:3000
+// // d7c32387-3feb-452b-8df1-2d8338b3ea22
+
+
+
+
+
 
   //this connects it to our port
   app.listen(PORT, () => {
