@@ -1,16 +1,47 @@
-{
-  "notesArray": [
-    {
-      "message": "here is the thing I posted"
-    },
-    {
-      "message": "here is the thing I posted"
-    },
-    {
-      "message": "here is the thing I posted"
-    },
-    {
-      "message": "here is the thing I posted"
-    }
-  ]
-}
+[
+  {
+    "title": "here is the thing I posted",
+    "text": "testing"
+  },
+  {
+    "title": "yo",
+    "text": "hey"
+  },
+  {
+    "title": "yes",
+    "text": "yes"
+  },
+  {
+    "title": "yo",
+    "text": "hi"
+  },
+  {
+    "title": "dsad",
+    "text": "dasd"
+  },
+  {
+    "title": "dasdew",
+    "text": "dasdasedw"
+  },
+  {
+    "title": "a",
+    "text": "b"
+  },
+  {
+    "title": "dfg",
+    "text": "fdgf"
+  },
+  {
+    "title": "fdgf",
+    "text": "ffg"
+  },
+  {
+    "title": "a",
+    "text": "b"
+  },
+  {
+    "title": "test2",
+    "text": "test2",
+    "id": "5q55yn8p4l0mzitne"
+  }
+]
